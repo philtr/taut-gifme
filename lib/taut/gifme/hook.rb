@@ -15,6 +15,8 @@ module Taut
                     "text"       => body }
 
         ::Net::HTTP.post_form(slack_url, {"payload" => MultiJson.dump(payload)})
+
+        return # return nil or slackbot will show it to you
       end
 
       protected
